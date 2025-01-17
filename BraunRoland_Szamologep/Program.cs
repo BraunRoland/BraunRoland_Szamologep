@@ -33,6 +33,28 @@ namespace BraunRoland_Szamologep
             Console.WriteLine($"{a} % {b} = {a%b}");
         }
 
+        static void Kivalasztas(string operátor, int a, int b)
+        {
+            switch(operátor)
+            {
+                case "+":
+                    Osszeadas(a, b);
+                    break;
+                case "-":
+                    Kivonas(a, b);
+                    break;
+                case "/":
+                    Osztas(a, b);
+                    break;
+                case "*":
+                    Szorzas(a, b);
+                    break;
+                case "%":
+                    Szazalek(a,b);
+                    break;
+            }
+        }
+
         static void Main(string[] args)
         {
         }
