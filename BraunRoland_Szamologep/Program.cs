@@ -18,6 +18,11 @@ namespace BraunRoland_Szamologep
             Console.WriteLine($"{a} - {b} = {a-b}");
         }
 
+        static void Osztas(int a, int b)
+        {
+            Console.WriteLine($"{a} / {b} = {a/b}");
+        }
+
         static void Main(string[] args)
         {
         }
