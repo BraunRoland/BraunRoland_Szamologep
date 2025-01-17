@@ -8,6 +8,11 @@ namespace BraunRoland_Szamologep
 {
     internal class Program
     {
+        static void Osszeadas(int a, int b)
+        {
+            Console.WriteLine($"{a} +  {b} = {a+b}");
+        }
+
         static void Main(string[] args)
         {
         }
