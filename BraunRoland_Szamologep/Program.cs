@@ -90,6 +90,7 @@ namespace BraunRoland_Szamologep
 
         static void Main(string[] args)
         {
+            Indít();
         }
     }
 }
