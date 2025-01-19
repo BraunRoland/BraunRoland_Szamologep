@@ -55,11 +55,20 @@ namespace BraunRoland_Szamologep
             }
         }
 
-        static void MasodFoku(int a, int b, int c)
+        static void MasodFoku(double a, double b, double c)
         {
-            double x1 = (-b + (Math.Sqrt(Math.Pow(b,2) - 4 * a * c))) / (2 * a);
-            double x2 = (-b - (Math.Sqrt(Math.Pow(b, 2) - 4 * a * c))) / (2 * a);
-            Console.WriteLine($"Első megoldás: {x1} |   Második megoldás: {x2}");
+            double gyok = Math.Pow(b,2)-(4*a*c);
+            double osztasAlja = 2 * a;
+            if (gyok <= 0)
+            {
+               Console.WriteLine("Az egyenlet nem megoldható mivel a gyök alatt 0 vagy kisebb a szám.");
+            }
+            else
+            {
+                double x1 = ((-b) + (Math.Sqrt(gyok))) / osztasAlja;
+                double x2 = ((-b) - (Math.Sqrt(gyok))) / osztasAlja;
+                Console.WriteLine($"Első megoldás: {x1} |   Második megoldás: {x2}");
+            }
         }
 
         static void Indít()
@@ -69,11 +78,11 @@ namespace BraunRoland_Szamologep
             if (valasz.ToUpper() == "I")
             {
                 Console.WriteLine("Add meg az 'a' értékét: ");
-                int a = int.Parse(Console.ReadLine());
+                double a = double.Parse(Console.ReadLine());
                 Console.WriteLine("Add meg a 'b' értékét: ");
-                int b = int.Parse(Console.ReadLine());
+                double b = double.Parse(Console.ReadLine());
                 Console.WriteLine("Add meg a 'c' értékét: ");
-                int c = int.Parse(Console.ReadLine());
+                double c = double.Parse(Console.ReadLine());
                 MasodFoku(a, b, c);
             }
             else
